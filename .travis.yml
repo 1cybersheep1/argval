@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.4'
+- '3.5'
+- '3.6'
+- '3.7'
+- '3.8'
+install:
+- pip install pytest pytest-cov flake8
+- pip install codecov
+- pip install .
+script:
+- flake8 --count
+- pytest --cov=./
